@@ -21,3 +21,4 @@ console.log(bhaskara(1, -3, 2));
 console.log(bhaskara(1, 2, 1));
 console.log(bhaskara(1, 1, 1));
 console.log(bhaskara(1, -6, 9));
+console.log(bhaskara(1, -3, -54));

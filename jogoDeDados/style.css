@@ -1,0 +1,113 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.sobreposicao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sobreposicao.ativo {
+    display: flex;
+}
+
+.popup.ativo {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.botaoFechar {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.containerDado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dado {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+.botaoDado, .botaoDeNovo {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #61dafb;
+    color: black;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.botaoDado:hover, .botaoDeNovo:hover {
+    background-color: #4fa3d1;
+}
+
+.botaoPopup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #61dafb;
+    color: black;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+}
+
+.botaoPopup:hover {
+    background-color: #4fa3d1;
+}
+
+p {
+    color: black;
+}
