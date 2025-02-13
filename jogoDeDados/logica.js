@@ -103,7 +103,12 @@ function rolarDado() {
             document.querySelector(".rodadas").innerText = `Rodada: ${rodada}`;
         }, 800); 
     } else {
-        atualizarMensagemPopup("Fim de jogo! Você chegou ao limite de rodadas.");
+
+        if(pontos >= 50) {
+            atualizarMensagemPopup("Fim de jogo! 🎉 Parabéns! 🎉 Você ganhou o jogo!");
+        }else{
+            atualizarMensagemPopup("Você perdeu o jogo! 😭😭 ");
+        }
         document.querySelector(".rodadas").innerText = `Pontos: ${pontos} | Rodada: ${rodada}`;
     }
 }
