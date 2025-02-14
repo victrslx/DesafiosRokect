@@ -33,7 +33,7 @@ function atualizarMensagemPopup(mensagem) {
     mostrarPopup();
 }
 
-let pontos = 100;
+let pontos = 0;
 let rodada = 1;
 let pontosPerdidosOuGanhos = 0;
 
@@ -51,24 +51,25 @@ function rolarDado() {
         
         setTimeout(() => {
             dado.textContent = numeroAleatorio;
-
-            
+   
             if (pontos >= 0) {
                 if (numeroAleatorio % 3 === 0) {
                     pontos += 15;
                     pontosPerdidosOuGanhos = 15;
+                    console.log(pontosPerdidosOuGanhos);
 
                 } else if (numeroAleatorio % 4 === 0) {
                     pontos -= 20;
                     pontosPerdidosOuGanhos = -20;
 
-                } else if (numeroAleatorio === 2 || numeroAleatorio === 4 || numeroAleatorio === 6) {
+                } else if (numeroAleatorio === 2 || numeroAleatorio === 6) {
                     pontos -= 5;
                     pontosPerdidosOuGanhos = -5;
 
-                } else if (numeroAleatorio === 1 || numeroAleatorio === 3 || numeroAleatorio === 5) {
+                } else if (numeroAleatorio === 1 || numeroAleatorio === 5) {
                     pontos += 10;
                     pontosPerdidosOuGanhos = 10;
+                    console.log(pontosPerdidosOuGanhos);
                 }
 
             } else {
@@ -80,11 +81,11 @@ function rolarDado() {
                     pontos -= 40;
                     pontosPerdidosOuGanhos = -40;
 
-                } else if (numeroAleatorio === 2 || numeroAleatorio === 4 || numeroAleatorio === 6) {
+                } else if (numeroAleatorio === 2 || numeroAleatorio === 6) {
                     pontos -= 10;
                     pontosPerdidosOuGanhos = -10;
 
-                } else if (numeroAleatorio === 1 || numeroAleatorio === 3 || numeroAleatorio === 5) {
+                } else if (numeroAleatorio === 1 || numeroAleatorio === 5) {
                     pontos += 10;
                     pontosPerdidosOuGanhos = 10;
                 }
